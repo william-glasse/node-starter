@@ -11,8 +11,10 @@ Packages to install
 ✅ Jest
     ✅ jest.config.js,
     ✅ add npm script for running jest in watch mode
-Husky
-    commitmessage, precommit, prepush hooks.
+✅ Husky
+    ✅  precommit, 
+    commitmessage,
+    prepush hooks. (need to test)
 Commitlint
     commitlint.config.js
 TypeSync
