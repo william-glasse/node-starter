@@ -1,5 +1,3 @@
-const dummy = () => {
-    return true
-};
+const dummy = () => true;
 
-module.exports = dummy
+module.exports = dummy;
