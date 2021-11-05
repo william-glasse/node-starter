@@ -1,5 +1,7 @@
+const dummy = require('../src/dummy');
+
 describe('Name of the group', () => {
     test('should ', () => {
-        expect(true).toBe(true);
+        expect(dummy()).toBe(true);
     });
 });

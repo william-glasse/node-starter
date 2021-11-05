@@ -1,5 +1,5 @@
-const dummy = () => {};
-
-module.exports = {
-  dummy,
+const dummy = () => {
+    return true
 };
+
+module.exports = dummy

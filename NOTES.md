@@ -3,13 +3,14 @@ Packages to install
 
 ✅ Git - .gitignore
 ✅Eslint (configs: AirBnB, prettier) plugins: (prettier)
-    .eslintrc file, .eslintignore,   
-Create dummy source file and test file
+✅    .eslintrc file, .eslintignore,   
+✅ Create dummy source file and test file
 ✅ Prettier
 ✅    .prettierrc, .prettierignore,
-Add extensions - Prettier, Eslint
-Jest
-    jest.config.js,
+✅ Add extensions - Prettier, Eslint
+✅ Jest
+    ✅ jest.config.js,
+    ✅ add npm script for running jest in watch mode
 Husky
     commitmessage, precommit, prepush hooks.
 Commitlint
