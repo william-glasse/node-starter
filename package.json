@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:unit",
+    "test": "snyk test && npm run test:unit",
     "test:unit": "jest",
     "test:unit:watch": "npm run test:unit -- --watch",
     "prepare": "husky install"
@@ -26,6 +26,7 @@
     "jest": "^27.3.1",
     "lint-staged": "^11.2.6",
     "prettier": "2.4.1",
+    "snyk": "^1.840.0",
     "typesync": "^0.8.0"
   },
   "lint-staged": {
