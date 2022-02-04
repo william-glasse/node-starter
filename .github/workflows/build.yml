@@ -25,19 +25,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  snyk:
-    name: Snyk
+  security:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v2
-        with:
-          node-version-file: '.nvmrc'
-      - name: Run Snyk Auth
-        run: npx snyk auth ${{ secrets.SNYK_TOKEN }}
-      - name: Run Snyk Test
-        run: npx snyk test --dev
-      - name: Run Snyk Monitor
-        run: npx snyk monitor --dev
+          command: monitor
