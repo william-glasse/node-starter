@@ -31,6 +31,6 @@ jobs:
         run: npx snyk auth ${{ secrets.SNYK_TOKEN }}
       - name: Run Snyk Test
         run: npx snyk test --dev
-
-
+      - name: Run Snyk Monitor
+        run: npx snyk monitor
       
