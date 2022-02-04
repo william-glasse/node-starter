@@ -27,9 +27,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run Snyk Test
+      - name: Install dependencies
         run: npm ci
+      - name: Run Snyk Auth
         run: snyk auth ${{ secrets.SNYK_TOKEN }}
+      - name: Run Snyk Test
         run: snyk test --dev
 
 
