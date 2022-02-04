@@ -32,5 +32,5 @@ jobs:
       - name: Run Snyk Test
         run: npx snyk test --dev
       - name: Run Snyk Monitor
-        run: npx snyk monitor
+        run: npx snyk monitor --dev
       
