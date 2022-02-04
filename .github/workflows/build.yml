@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v2
         with:
-          node-version: '16.13.0'
+          node-version-file: '.nvmrc'
       - name: Install dependencies
         run: npm ci
       - name: Unit Tests
@@ -34,7 +34,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v2
         with:
-          node-version: '16.13.0'
+          node-version-file: '.nvmrc'
       - name: Run Snyk Auth
         run: npx snyk auth ${{ secrets.SNYK_TOKEN }}
       - name: Run Snyk Test
