@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "snyk test && npm run test:unit",
+    "test": "npm run test:unit",
     "test:unit": "jest",
     "test:unit:watch": "npm run test:unit -- --watch",
-    "test:security": "snyk test",
+    "test:security": "snyk test --dev",
     "prepare": "husky install"
   },
   "author": "",
