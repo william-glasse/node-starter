@@ -2,16 +2,28 @@
   "name": "node-starter",
   "version": "1.0.0",
   "description": "",
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
   "scripts": {
+    "eslint:fix": "eslint --cache --fix",
+    "eslint:verify": "eslint \"*.js\"",
+    "prepare": "husky install",
+    "prettier:fix": "prettier --write \"*.{js,css,md,yml,json}\"",
+    "prettier:verify": "prettier --check \"*.{js,css,md,yml,json}\"",
     "test": "npm run test:unit",
-    "test:unit": "jest",
-    "test:unit:watch": "npm run test:unit -- --watch",
     "test:security": "snyk test --dev",
-    "prepare": "husky install"
+    "test:unit": "jest",
+    "test:unit:watch": "npm run test:unit -- --watch"
   },
-  "author": "",
-  "license": "ISC",
+  "lint-staged": {
+    "*.js": "npm run eslint:fix",
+    "*.{js,css,md,yml,json}": "npm run prettier:fix",
+    "package.json": [
+      "typesync --silent",
+      "sort-package-json"
+    ]
+  },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
@@ -28,15 +40,7 @@
     "lint-staged": "^11.2.6",
     "prettier": "2.4.1",
     "snyk": "^1.840.0",
+    "sort-package-json": "^1.54.0",
     "typesync": "^0.8.0"
-  },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": [
-      "prettier --write"
-    ],
-    "package.json": [
-      "typesync --silent"
-    ]
   }
 }
