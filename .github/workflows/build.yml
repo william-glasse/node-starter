@@ -6,6 +6,16 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
+  detect-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: npm ci
+      - name: Detect Secrets
+        run: npm run detect-secrets
   format:
     runs-on: ubuntu-latest
     steps:
