@@ -1,5 +1,3 @@
-const dummy = () => {
-    const password = 'LKHAKHGFSASFHBJFDJSDFLKJDF';
-}
+const dummy = () => true;
 
 module.exports = dummy;
