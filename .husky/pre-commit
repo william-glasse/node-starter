@@ -1,5 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged
-npm run detect-secrets $( git diff --staged --name-only )
+npx lint-staged --relative --verbose
