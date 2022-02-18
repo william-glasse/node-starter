@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Detect Secrets
-        run: npm run detect-secrets
+        run: npm run detect-secrets $( git ls-files )
   format:
     runs-on: ubuntu-latest
     steps:
