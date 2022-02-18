@@ -19,9 +19,6 @@
     "test:unit:watch": "npm run test:unit -- --watch"
   },
   "lint-staged": {
-    "*": [
-      "npm run detect-secrets"
-    ],
     "*.js": "npm run eslint:fix",
     "*.{js,css,md,yml,json}": "npm run prettier:fix",
     "package.json": [
